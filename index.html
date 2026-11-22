@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yunheng Zou</title>
+  <meta name="description" content="Yunheng Zou — PhD researcher in Computer Science at the University of Toronto working on AI agents for scientific discovery.">
+  <meta property="og:title" content="Yunheng Zou">
+  <meta property="og:description" content="PhD researcher at the University of Toronto pursuing AI scientists: domain-specialized agents, autonomous labs, and RL environments for deep-domain science.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Yunheng Zou</a>
+      <nav aria-label="Sections">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="files/Yunheng_Zou_CV.pdf">CV</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap" id="top">
+      <div class="hero-text">
+        <img class="avatar" src="assets/img/profile.jpg" alt="Portrait of Yunheng Zou" width="168" height="168">
+        <div>
+          <h1>Yunheng Zou</h1>
+          <p class="role">PhD Student in Computer Science, University of Toronto<br>
+            <span>Matter Lab · Vector Institute · Research Intern, NVIDIA Research</span></p>
+          <p class="bio">
+            I am pursuing <strong>AI scientists</strong>: agents that can carry out deep, domain-heavy research and
+            make scientific discovery faster and cheaper. I am interested in tackling hard problems in physics,
+            chemistry and biology with a high degree of autonomy, by pairing domain-specialized agents with
+            autonomous laboratories. I also work on the foundations this needs: benchmarks, data synthesis, and
+            specialized RL environments for deep-domain tasks and domain adaptation.
+            I lead <a href="#el-agente">El Agente</a>, a family of autonomous agents for computational chemistry,
+            advised by <a href="https://www.matter.toronto.edu/" rel="noopener">Prof. Alán Aspuru-Guzik</a> and
+            Prof. Varinia Bernales.
+          </p>
+          <ul class="links">
+            <li><a href="mailto:yunheng.zou@mail.utoronto.ca">Email</a></li>
+            <li><a href="https://scholar.google.com/citations?user=rQD4f6IAAAAJ" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://github.com/yunhzou" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jackie-yunheng-zou" rel="noopener">LinkedIn</a></li>
+            <li><a href="files/Yunheng_Zou_CV.pdf">CV (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Self-driving lab widget -->
+      <figure class="lab" aria-labelledby="lab-caption">
+        <div class="lab-head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>        </div>
+        <svg id="lab-svg" viewBox="0 0 480 300" role="group" aria-label="Robotic arm lab bench. Choose a sample to have the arm fetch that section.">
+          <defs>
+            <linearGradient id="liquid-a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--s1)" stop-opacity=".95"/><stop offset="1" stop-color="var(--s1)" stop-opacity=".7"/></linearGradient>
+            <linearGradient id="liquid-b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--s2)" stop-opacity=".95"/><stop offset="1" stop-color="var(--s2)" stop-opacity=".7"/></linearGradient>
+            <linearGradient id="liquid-c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--s3)" stop-opacity=".95"/><stop offset="1" stop-color="var(--s3)" stop-opacity=".7"/></linearGradient>
+            <linearGradient id="liquid-d" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--s4)" stop-opacity=".95"/><stop offset="1" stop-color="var(--s4)" stop-opacity=".7"/></linearGradient>
+          </defs>
+
+          <!-- grid backdrop -->
+          <g class="grid" aria-hidden="true">
+            <path d="M0 50H480M0 100H480M0 150H480M0 200H480M60 0V262M120 0V262M180 0V262M240 0V262M300 0V262M360 0V262M420 0V262"/>
+          </g>
+
+          <!-- bench -->
+          <rect class="bench" x="0" y="262" width="480" height="38"/>
+          <line class="bench-edge" x1="0" y1="262" x2="480" y2="262"/>
+
+          <!-- delivery tray / analyzer -->
+          <g class="tray" aria-hidden="true">
+            <rect x="392" y="214" width="76" height="48" rx="6"/>
+            <rect class="tray-slot" x="411" y="208" width="38" height="10" rx="3"/>
+            <rect class="tray-screen" id="tray-screen" x="400" y="228" width="60" height="22" rx="3"/>
+            <text x="430" y="243" text-anchor="middle" id="tray-text">READY</text>
+            <text class="tray-label" x="430" y="284" text-anchor="middle">analyzer</text>
+          </g>
+
+          <!-- rack -->
+          <rect class="rack" x="178" y="238" width="202" height="8" rx="3" aria-hidden="true"/>
+          <rect class="rack" x="178" y="252" width="202" height="8" rx="3" aria-hidden="true"/>
+
+          <!-- vials (interactive) -->
+          <g id="vials"></g>
+
+          <!-- arm -->
+          <g id="arm" aria-hidden="true">
+            <rect class="arm-base" x="74" y="244" width="72" height="18" rx="4"/>
+            <rect class="arm-base" x="92" y="228" width="36" height="20" rx="4"/>
+            <text class="arm-id" x="110" y="284" text-anchor="middle">ARM-01</text>
+            <line id="arm-l1" class="arm-link" x1="110" y1="226" x2="110" y2="80"/>
+            <line id="arm-l2" class="arm-link thin" x1="110" y1="80" x2="200" y2="120"/>
+            <circle id="arm-j0" class="arm-joint" cx="110" cy="226" r="11"/>
+            <circle id="arm-j1" class="arm-joint" cx="110" cy="80" r="9"/>
+            <g id="gripper" transform="translate(200 120)">
+              <rect class="grip-body" x="-17" y="3" width="34" height="9" rx="2"/>
+              <rect id="finger-l" class="grip-finger" x="-17" y="10" width="4" height="15" rx="1.5"/>
+              <rect id="finger-r" class="grip-finger" x="13" y="10" width="4" height="15" rx="1.5"/>
+              <circle class="arm-joint small" cx="0" cy="0" r="6"/>
+            </g>
+          </g>
+          <g id="carried"></g>
+        </svg>
+        <figcaption id="lab-caption">
+          <p class="console" aria-live="polite"><span class="prompt">&gt;</span> <span id="console-text">idle — click a sample and the arm will fetch it.</span></p>
+          <p class="hint">Prefer plain navigation? Every section is also linked in the menu above.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ NEWS ============ -->
+    <section class="wrap section" id="news" aria-labelledby="news-h">
+      <h2 id="news-h">News</h2>
+      <ul class="news">
+        <li><time>Nov 2026</time><span>Released <a href="https://yunhzou.github.io/MAPPA-AAM/" rel="noopener">MAPPA</a>, an atom mapper that keeps every valid mapping of a reaction, not just one: 99.03% reference coverage on Golden and 99.63% on EnzymeMap. <a href="https://arxiv.org/abs/2611.25052" rel="noopener">Paper</a> · <a href="https://yunhzou.github.io/MAPPA-AAM/" rel="noopener">Blog</a> · <a href="https://github.com/yunhzou/MAPPA-AAM" rel="noopener">Code</a></span></li>
+        <li><time>Dec 2026</time><span>Presenting <em>Agora: Git as Shared Memory for Collective AutoResearch</em> at NeurIPS 2026 in Sydney.</span></li>
+        <li><time>2026</time><span><a href="https://arxiv.org/abs/2601.22975" rel="noopener">Golden Goose</a> accepted at ICML 2026.</span></li>
+        <li><time>2026</time><span><a href="https://arxiv.org/abs/2602.04850" rel="noopener">El Agente Quntur</a> accepted in <em>Chem</em>.</span></li>
+        <li><time>2026</time><span>Released <a href="https://arxiv.org/abs/2605.24220" rel="noopener">Polar</a>, agentic RL on any harness at scale, with NVIDIA Research.</span></li>
+        <li><time>Jan 2026</time><span>Joined NVIDIA Research as a research intern, working on agentic post-training.</span></li>
+        <li><time>2025</time><span><a href="https://doi.org/10.1016/j.matt.2025.102263" rel="noopener">El Agente</a> published as a cover article in <em>Matter</em>.</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section class="wrap section" id="research" aria-labelledby="research-h">
+      <h2 id="research-h">Research</h2>
+      <p class="lede">My long-term goal is AI scientists that make research more scalable and cost-effective. I am especially
+        interested in agents that tackle deep-science problems requiring real domain expertise, and in methods that let
+        those agents adapt to a new scientific field on their own.</p>
+
+      <div class="cards">
+        <article class="card" id="el-agente">
+          <div class="card-tag">01 · Scientific agents</div>
+          <h3>El Agente</h3>
+          <p>A family of autonomous agents for computational chemistry and materials, from quantum chemistry to
+            solid-state simulation, molecular editing, and transition-state search.</p>
+          <ul class="chips" aria-label="El Agente projects">
+            <li>El Agente Q</li><li>Cuántico</li><li>Sólido</li><li>Quntur</li><li>Estructural</li><li>Disco</li><li>Farmaco</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-tag">02 · Agentic post-training</div>
+          <h3>Training agents to do science</h3>
+          <p>Multi-turn RL infrastructure and post-training recipes for agents: synthesizing verifiable RL tasks at scale,
+            computer-use agents, SFT + RLVR for molecular manipulation, and chemistry verifiers such as
+            reaction atom mapping.</p>
+          <ul class="chips"><li>Golden Goose</li><li>Polar</li><li>MAPPA</li><li>NeMo RL</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-tag">03 · Self-driving labs</div>
+          <h3>Closing the loop</h3>
+          <p>Autonomous experimentation and its safety: Bayesian optimization with unknown feasibility constraints,
+            and what it takes to run self-driving laboratories responsibly.</p>
+          <ul class="chips"><li>Anubis</li><li>Safe SDLs</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section class="wrap section" id="publications" aria-labelledby="pubs-h">
+      <div class="section-head">
+        <h2 id="pubs-h">Publications</h2>
+        <div class="filters" role="group" aria-label="Filter publications">
+          <button type="button" class="filter is-on" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="lead" aria-pressed="false">First / co-first author</button>
+        </div>
+      </div>
+      <p class="note">* equal contribution. Full list on <a href="https://scholar.google.com/citations?user=rQD4f6IAAAAJ" rel="noopener">Google Scholar</a>.</p>
+
+      <ol class="pubs">
+        <li class="pub" data-lead="true">
+          <span class="year">2026</span>
+          <div>
+            <p class="title">MAPPA: Mapping of Atoms by Progressive Pattern Assembly with Molecular Symmetry</p>
+            <p class="authors"><b>Y. Zou</b>, O. Nieto Faza, S. Hussain, V. Bernales, A. Aspuru-Guzik</p>
+            <p class="venue">Preprint, 2026 <a class="tag" href="https://arxiv.org/abs/2611.25052" rel="noopener">arXiv</a> <a class="tag" href="https://yunhzou.github.io/MAPPA-AAM/" rel="noopener">Blog</a> <a class="tag" href="https://github.com/yunhzou/MAPPA-AAM" rel="noopener">Code</a></p>
+          </div>
+        </li>
+        <li class="pub" data-lead="true">
+          <span class="year">2026</span>
+          <div>
+            <p class="title">El Agente Quntur: A Research Collaborator Agent for Quantum Chemistry</p>
+            <p class="authors">J. B. Pérez-Sánchez*, <b>Y. Zou</b>*, J. A. Campos-Gonzalez-Angulo, M. Müller, et al.</p>
+            <p class="venue"><em>Chem</em> (accepted), 2026 <a class="tag" href="https://arxiv.org/abs/2602.04850" rel="noopener">arXiv</a></p>
+          </div>
+        </li>
+        <li class="pub" data-lead="true">
+          <span class="year">2026</span>
+          <div>
+            <p class="title">El Agente Estructural: An Artificially Intelligent Molecular Editor</p>
+            <p class="authors">C. Choi*, <b>Y. Zou</b>*, M. Müller, H. Hao, Y. Kang, J. B. Pérez-Sánchez, I. Gustin, et al.</p>
+            <p class="venue">Preprint, 2026 <a class="tag" href="https://arxiv.org/abs/2602.04849" rel="noopener">arXiv</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="year">2026</span>
+          <div>
+            <p class="title">Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text</p>
+            <p class="authors">X. Lu, D. Acuna, J. Jung, J. Hu, D. Zhang, S. Diao, <b>Y. Zou</b>, S. Zhang, B. Cui, et al.</p>
+            <p class="venue">ICML 2026 <a class="tag" href="https://arxiv.org/abs/2601.22975" rel="noopener">arXiv</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="year">2026</span>
+          <div>
+            <p class="title">Polar: Agentic RL on Any Harness at Scale</p>
+            <p class="authors">B. Xu, H. Zhang, S. Zhang, S. Han, M. Liu, J. Hu, S. Diao, Z. Jin, <b>Y. Zou</b>, M. Demoret, J. Kautz, Y. Dong</p>
+            <p class="venue">Preprint, 2026 <a class="tag" href="https://arxiv.org/abs/2605.24220" rel="noopener">arXiv</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="year">2026</span>
+          <div>
+            <p class="title">El Agente Sólido: A New Age(nt) for Solid State Simulations</p>
+            <p class="authors">S. G. H. Kumar, <b>Y. Zou</b>, A. Wang, J. Valdés-Hernández, T. W. Ko, N. Yue, O. Leng, et al.</p>
+            <p class="venue">Preprint, 2026 <a class="tag" href="https://arxiv.org/abs/2602.17886" rel="noopener">arXiv</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="year">2026</span>
+          <div>
+            <p class="title">El Agente Cuántico: Automating Quantum Simulations</p>
+            <p class="authors">I. Gustin, L. M. Calderón, J. B. Pérez-Sánchez, J. F. Gonthier, Y. Nakamura, <b>Y. Zou</b>, et al.</p>
+            <p class="venue"><em>Reports on Progress in Physics</em>, 2026 <a class="tag" href="https://doi.org/10.1088/1361-6633/ae8933" rel="noopener">DOI</a></p>
+          </div>
+        </li>
+        <li class="pub" data-lead="true">
+          <span class="year">2025</span>
+          <div>
+            <p class="title">El Agente: An Autonomous Agent for Quantum Chemistry</p>
+            <p class="authors"><b>Y. Zou</b>, A. H. Cheng, A. Aldossary, J. Bai, S. X. Leong, et al.</p>
+            <p class="venue"><em>Matter</em> 8(7), 2025 · <span class="badge">Cover article</span> <a class="tag" href="https://doi.org/10.1016/j.matt.2025.102263" rel="noopener">DOI</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="year">2025</span>
+          <div>
+            <p class="title">Steering Towards Safe Self-Driving Laboratories</p>
+            <p class="authors">S. X. Leong, C. E. Griesbach, R. Zhang, K. Darvish, Y. Zhao, A. Mandal, <b>Y. Zou</b>, et al.</p>
+            <p class="venue"><em>Nature Reviews Chemistry</em> 9(8), 707–722, 2025</p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="year">2025</span>
+          <div>
+            <p class="title">Anubis: Bayesian Optimization with Unknown Feasibility Constraints for Scientific Experimentation</p>
+            <p class="authors">R. J. Hickman, G. Tom, <b>Y. Zou</b>, M. Aldeghi, A. Aspuru-Guzik</p>
+            <p class="venue"><em>Digital Discovery</em> 4(8), 2104–2122, 2025</p>
+          </div>
+        </li>
+      </ol>
+      <p class="note">In preparation: <em>El Agente Disco: Agentic AI for Transition State Discovery</em> (<b>Y. Zou</b>*, F. Olalla*, et al.).</p>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="wrap section two-col" id="experience" aria-labelledby="exp-h">
+      <div>
+        <h2 id="exp-h">Experience</h2>
+        <ol class="timeline">
+          <li>
+            <div class="when">2026 – present</div>
+            <div class="what"><strong>NVIDIA Research</strong> · Research Intern, Toronto</div>
+            <p>Computer-use agent post-training; SFT + RLVR for molecular manipulation; autonomous domain adaptation;
+              multi-turn agent RL infrastructure (Polar, NeMo RL).</p>
+          </li>
+          <li>
+            <div class="when">2024 – present</div>
+            <div class="what"><strong>Matter Lab, University of Toronto</strong> · PhD Researcher</div>
+            <p>Lead the El Agente portfolio of scientific agents across quantum chemistry, solid-state simulation,
+              molecular editing, drug discovery, and transition-state search.</p>
+          </li>
+          <li>
+            <div class="when">2023</div>
+            <div class="what"><strong>Tesla</strong> · Cell Engineer Intern, Palo Alto</div>
+            <p>Built the Electrode Dissection Inspection System for 4680 cells, automating imaging and defect detection
+              and cutting per-cell analysis from 1.5 h to 30 min.</p>
+          </li>
+          <li>
+            <div class="when">2021 – 2022</div>
+            <div class="what"><strong>VueReal</strong> · Test Automation Engineer Intern, Waterloo</div>
+            <p>Automated Micro-LED backplane qualification, cutting inspection from 6 h to 20 min.</p>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 id="edu-h">Education</h2>
+        <ol class="timeline">
+          <li>
+            <div class="when">2024 – present</div>
+            <div class="what"><strong>University of Toronto</strong></div>
+            <p>PhD in Computer Science. Advisors: Alán Aspuru-Guzik and Varinia Bernales. Affiliated with the Vector Institute.</p>
+          </li>
+          <li>
+            <div class="when">2019 – 2024</div>
+            <div class="what"><strong>University of Waterloo</strong></div>
+            <p>BASc in Nanotechnology Engineering.</p>
+          </li>
+        </ol>
+        <h2 class="mt">Awards</h2>
+        <ul class="plain">
+          <li>Norman Esch Entrepreneurship Award, 2024</li>
+          <li>Nanotechnology Design Symposium Award, 2024</li>
+          <li>First-in-Class Scholarship, 2023</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="wrap section" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <p>I am always happy to talk about AI scientists, agent training, and autonomous labs.
+        Reach me at <a href="mailto:yunheng.zou@mail.utoronto.ca">yunheng.zou@mail.utoronto.ca</a>.</p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© 2026 Yunheng Zou</span>
+    <span>Toronto, Canada</span>
+  </footer>
+
+  <script src="assets/js/lab.js" defer></script>
+</body>
+</html>
